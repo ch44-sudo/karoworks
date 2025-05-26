@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Karoworks - Your Trusted Healthcare Partner</title>
   <link href="styles.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <div class="container header-container">
+    <div class="container nav-container">
       <div class="logo">Karoworks</div>
-      <nav id="navbar" class="nav">
-        <ul class="nav-links">
+      <nav id="nav-menu">
+        <ul>
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#about" class="nav-link">About Us</a></li>
@@ -21,15 +20,15 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <div class="mobile-menu-icon" id="menu-toggle">☰</div>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
     </div>
   </header>
 
   <section id="home" class="hero">
     <div class="container hero-content">
-      <h1>Accessible Healthcare for Everyone</h1>
-      <p>Pharmacy, expert advice, and health tools, all in one place.</p>
-      <a href="#services" class="btn-primary">Explore Our Services</a>
+      <h1>Your Trusted Online Pharmacy & Healthcare</h1>
+      <p>Quality medicines, fast delivery & expert care at your fingertips.</p>
+      <a href="#services" class="btn-primary">Explore Services</a>
     </div>
   </section>
 
@@ -38,28 +37,24 @@
       <h2>Our Services</h2>
       <div class="services-grid">
         <div class="service-card">
+          <img src="https://via.placeholder.com/120x80?text=Pharmacy" alt="Online Pharmacy" />
           <h3>Online Pharmacy</h3>
-          <p>Order your prescription and OTC meds online. Fast delivery guaranteed.</p>
+          <p>Order medicines online with quick doorstep delivery.</p>
         </div>
         <div class="service-card">
-          <h3>Virtual Consultations</h3>
-          <p>Chat with certified doctors from the comfort of your home.</p>
+          <img src="https://via.placeholder.com/120x80?text=Consultation" alt="Health Consultation" />
+          <h3>Health Consultation</h3>
+          <p>Connect with certified healthcare professionals anytime.</p>
         </div>
         <div class="service-card">
-          <h3>Wellness Packages</h3>
-          <p>Regular checkups and diagnostics tailored to your needs.</p>
+          <img src="https://via.placeholder.com/120x80?text=Health+Kit" alt="Health Kits" />
+          <h3>Health Kits</h3>
+          <p>Pre-packaged health kits for your daily needs.</p>
         </div>
         <div class="service-card">
-          <h3>Diet & Fitness</h3>
-          <p>Custom diet and workout plans from top nutritionists and trainers.</p>
-        </div>
-        <div class="service-card">
-          <h3>Mental Health Support</h3>
-          <p>Get in touch with licensed therapists and counselors.</p>
-        </div>
-        <div class="service-card">
-          <h3>Emergency Support</h3>
-          <p>Quick access to emergency help and first-aid guidance.</p>
+          <img src="https://via.placeholder.com/120x80?text=Nutrition" alt="Nutrition Advice" />
+          <h3>Nutrition Advice</h3>
+          <p>Personalized diet plans to help you stay fit and healthy.</p>
         </div>
       </div>
     </div>
@@ -69,24 +64,37 @@
     <div class="container">
       <h2>About Karoworks</h2>
       <p>
-        At Karoworks, our mission is to provide accessible and affordable healthcare to all.
-        Through our digital platform, we bring pharmacy services, professional consultations,
-        and wellness solutions to your fingertips. We believe healthcare should be personalized,
-        seamless, and trustworthy.
+        Karoworks is dedicated to bridging the gap between quality healthcare and accessibility. Our mission is to provide trusted health products and services that improve lives. With a technology-driven approach and expert team, we ensure that every customer receives personalized care.
       </p>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Dr. Sarah Patel" />
+          <h4>Dr. Sarah Patel</h4>
+          <p>Chief Medical Advisor</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Alex Johnson" />
+          <h4>Alex Johnson</h4>
+          <p>Lead Pharmacist</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="testimonials" class="testimonials-section">
     <div class="container">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial">
-        <p>"Karoworks helped me get my medications during lockdown. It was seamless and fast!"</p>
-        <span>- Anita R.</span>
-      </div>
-      <div class="testimonial">
-        <p>"The consultation was professional and helpful. I felt heard and supported."</p>
-        <span>- Dr. Vinod M.</span>
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer photo" />
+          <p>"Karoworks has been a lifesaver. Their delivery is quick, and the consultations are very helpful."</p>
+          <h4>Priya D.</h4>
+        </div>
+        <div class="testimonial">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer photo" />
+          <p>"Easy to use, great range of medicines, and professional advice. Highly recommend."</p>
+          <h4>Rahul K.</h4>
+        </div>
       </div>
     </div>
   </section>
@@ -101,9 +109,6 @@
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required placeholder="Your email address" />
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Subject of your message" />
-
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
 
@@ -115,12 +120,28 @@
   <footer>
     <div class="container">
       <p>© 2025 Karoworks. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#">Facebook</a> |
-        <a href="#">Twitter</a> |
-        <a href="#">LinkedIn</a>
-      </div>
     </div>
   </footer>
+
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('a.nav-link').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Mobile nav toggle
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navMenu = document.getElementById("nav-menu");
+    mobileMenu.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+  </script>
 </body>
 </html>
