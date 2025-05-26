@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karoworks - Your Trusted Healthcare Partner</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Karoworks</div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Your Trusted Online Pharmacy & Healthcare</h1>
+      <p>Quality medicines, fast delivery & expert care at your fingertips.</p>
+      <a href="#services" class="btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Online Pharmacy</h3>
+          <p>Order medicines online with quick doorstep delivery.</p>
+        </div>
+        <div class="service-card">
+          <h3>Health Consultation</h3>
+          <p>Connect with certified healthcare professionals anytime.</p>
+        </div>
+        <div class="service-card">
+          <h3>Health Kits</h3>
+          <p>Pre-packaged health kits for your daily needs.</p>
+        </div>
+        <div class="service-card">
+          <h3>Nutrition Advice</h3>
+          <p>Personalized diet plans to help you stay fit and healthy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Karoworks</h2>
+      <p>
+        Karoworks is dedicated to bridging the gap between quality healthcare and accessibility. Our mission is to provide trusted health products and services that improve lives. With a technology-driven approach and expert team, we ensure that every customer receives personalized care.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Your email address" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Karoworks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('a.nav-link').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
